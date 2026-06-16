@@ -59,7 +59,7 @@ export default function BookDetailPage({
 
         {/* Details */}
         <div>
-          <p className="text-indigo-600 font-semibold text-sm uppercase tracking-widest mb-2">
+          <p className="text-red-600 font-semibold text-sm uppercase tracking-widest mb-2">
             {book.category}
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
@@ -95,7 +95,7 @@ export default function BookDetailPage({
                   onClick={() => setSelectedFormat(fmt)}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border-2 text-sm font-medium transition-all ${
                     selectedFormat === fmt
-                      ? "border-indigo-600 bg-indigo-50 text-indigo-700"
+                      ? "border-red-600 bg-yellow-50 text-red-700"
                       : "border-gray-200 text-gray-600 hover:border-gray-300"
                   }`}
                 >
@@ -115,14 +115,14 @@ export default function BookDetailPage({
           <div className="flex gap-3 mt-5">
             <button
               onClick={() => addItem(book, selectedFormat)}
-              className="flex items-center gap-2 px-6 py-3.5 rounded-2xl border-2 border-gray-200 hover:border-indigo-400 font-semibold text-gray-700 transition-colors"
+              className="flex items-center gap-2 px-6 py-3.5 rounded-2xl border-2 border-gray-200 hover:border-yellow-400 font-semibold text-gray-700 transition-colors"
             >
               <ShoppingCart size={18} />
               Add to Cart
             </button>
             <button
               onClick={handleBuyNow}
-              className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-2xl transition-colors text-sm"
+              className="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-2xl transition-colors text-sm"
             >
               Buy Now — ${book.price.toFixed(2)}
             </button>
@@ -144,7 +144,7 @@ export default function BookDetailPage({
       {/* Excerpt */}
       <section className="mt-20 bg-white rounded-3xl border border-gray-100 p-8 md:p-12 shadow-sm">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Sample Excerpt</h2>
-        <blockquote className="border-l-4 border-indigo-500 pl-6 text-gray-600 text-lg italic leading-relaxed">
+        <blockquote className="border-l-4 border-red-500 pl-6 text-gray-600 text-lg italic leading-relaxed">
           "{book.excerpt}"
         </blockquote>
       </section>

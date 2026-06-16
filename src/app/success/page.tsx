@@ -20,7 +20,7 @@ export default function SuccessPage() {
         </p>
         <Link
           href="/"
-          className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-8 py-4 rounded-2xl transition-colors"
+          className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-2xl transition-colors"
         >
           Back to Shop
         </Link>

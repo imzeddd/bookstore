@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 text-white font-bold text-lg mb-3">
-            <BookOpen size={20} className="text-indigo-400" />
+            <BookOpen size={20} className="text-yellow-400" />
             PageForge
           </div>
           <p className="text-sm leading-relaxed">

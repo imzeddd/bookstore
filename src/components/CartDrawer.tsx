@@ -80,7 +80,7 @@ export default function CartDrawer({ open, onClose }: Props) {
                     <p className="font-semibold text-gray-900 text-sm leading-tight truncate">
                       {item.book.title}
                     </p>
-                    <p className="text-xs text-indigo-600 uppercase font-medium mt-0.5">
+                    <p className="text-xs text-red-600 uppercase font-medium mt-0.5">
                       {item.format}
                     </p>
                     <div className="flex items-center gap-3 mt-2">
@@ -129,7 +129,7 @@ export default function CartDrawer({ open, onClose }: Props) {
             </div>
             <button
               onClick={handleCheckout}
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl transition-colors text-sm"
+              className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl transition-colors text-sm"
             >
               Checkout with Stripe
             </button>

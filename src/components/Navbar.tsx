@@ -17,22 +17,22 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 font-bold text-xl text-gray-900">
-            <BookOpen className="text-indigo-600" size={24} />
+            <BookOpen className="text-red-600" size={24} />
             <span>PageForge</span>
           </Link>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-            <Link href="/" className="hover:text-indigo-600 transition-colors">Shop</Link>
+            <Link href="/" className="hover:text-red-600 transition-colors">Shop</Link>
             <a
               href="https://zanwer25.substack.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-indigo-600 transition-colors"
+              className="hover:text-red-600 transition-colors"
             >
               Newsletter
             </a>
-            <Link href="/#about" className="hover:text-indigo-600 transition-colors">About</Link>
+            <Link href="/#about" className="hover:text-red-600 transition-colors">About</Link>
           </div>
 
           {/* Cart + Mobile toggle */}
@@ -44,7 +44,7 @@ export default function Navbar() {
             >
               <ShoppingCart size={22} className="text-gray-700" />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-indigo-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
                   {totalItems > 9 ? "9+" : totalItems}
                 </span>
               )}
@@ -62,17 +62,17 @@ export default function Navbar() {
         {/* Mobile menu */}
         {menuOpen && (
           <div className="md:hidden border-t border-gray-100 bg-white px-4 py-4 flex flex-col gap-4 text-sm font-medium text-gray-700">
-            <Link href="/" onClick={() => setMenuOpen(false)} className="hover:text-indigo-600">Shop</Link>
+            <Link href="/" onClick={() => setMenuOpen(false)} className="hover:text-red-600">Shop</Link>
             <a
               href="https://zanwer25.substack.com"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="hover:text-indigo-600"
+              className="hover:text-red-600"
             >
               Newsletter
             </a>
-            <Link href="/#about" onClick={() => setMenuOpen(false)} className="hover:text-indigo-600">About</Link>
+            <Link href="/#about" onClick={() => setMenuOpen(false)} className="hover:text-red-600">About</Link>
           </div>
         )}
       </nav>

@@ -7,17 +7,17 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-indigo-950 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-gray-950 via-red-950 to-yellow-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20"
-          style={{ backgroundImage: "radial-gradient(ellipse at 60% 50%, #6366f1 0%, transparent 70%)" }}
+          style={{ backgroundImage: "radial-gradient(ellipse at 60% 50%, #ef4444 0%, transparent 70%)" }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-1.5 bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
+          <span className="inline-flex items-center gap-1.5 bg-yellow-500/20 border border-yellow-500/30 text-yellow-300 text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
             <Star size={12} fill="currentColor" /> Bestselling Author
           </span>
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight max-w-4xl">
             Books That Rewire <br className="hidden md:block" />
-            <span className="text-indigo-400">How You Think</span>
+            <span className="text-yellow-400">How You Think</span>
           </h1>
           <p className="mt-6 text-gray-300 text-lg md:text-xl max-w-2xl leading-relaxed">
             Practical wisdom for modern minds. Instant digital downloads. Life-changing ideas.
@@ -25,7 +25,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
             <a
               href="#books"
-              className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-8 py-4 rounded-2xl transition-colors text-base"
+              className="bg-red-600 hover:bg-red-500 text-white font-bold px-8 py-4 rounded-2xl transition-colors text-base"
             >
               Browse All Books
             </a>

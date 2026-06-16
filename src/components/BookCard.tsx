@@ -39,7 +39,7 @@ export default function BookCard({ book }: { book: Book }) {
           priority={false}
         />
         {book.badge && (
-          <span className="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+          <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
             {book.badge}
           </span>
         )}
@@ -47,11 +47,11 @@ export default function BookCard({ book }: { book: Book }) {
 
       {/* Info */}
       <div className="p-5">
-        <p className="text-xs text-indigo-500 font-semibold uppercase tracking-wide mb-1">
+        <p className="text-xs text-red-500 font-semibold uppercase tracking-wide mb-1">
           {book.category}
         </p>
         <Link href={`/book/${book.slug}`}>
-          <h3 className="font-bold text-gray-900 text-base leading-snug hover:text-indigo-600 transition-colors line-clamp-2">
+          <h3 className="font-bold text-gray-900 text-base leading-snug hover:text-red-600 transition-colors line-clamp-2">
             {book.title}
           </h3>
         </Link>
@@ -64,14 +64,14 @@ export default function BookCard({ book }: { book: Book }) {
           <div className="flex gap-2">
             <button
               onClick={() => addItem(book, book.formats[0])}
-              className="p-2.5 rounded-xl border border-gray-200 hover:border-indigo-400 hover:text-indigo-600 transition-colors"
+              className="p-2.5 rounded-xl border border-gray-200 hover:border-red-400 hover:text-red-600 transition-colors"
               aria-label="Add to cart"
             >
               <ShoppingCart size={18} />
             </button>
             <button
               onClick={handleBuyNow}
-              className="flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors"
+              className="flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors"
             >
               <Zap size={15} />
               Buy Now
