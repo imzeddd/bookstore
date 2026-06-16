@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b"/>
+      <stop offset="100%" style="stop-color:#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="600" fill="url(#g)"/>
+  <rect x="30" y="30" width="340" height="540" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.4"/>
+  <circle cx="200" cy="180" r="70" fill="none" stroke="#6366f1" stroke-width="3" opacity="0.6"/>
+  <circle cx="200" cy="180" r="45" fill="#4f46e5" opacity="0.5"/>
+  <text x="200" y="188" font-family="Georgia,serif" font-size="32" fill="#c7d2fe" text-anchor="middle">◉</text>
+  <text x="200" y="310" font-family="Georgia,serif" font-size="26" font-weight="bold" fill="#e0e7ff" text-anchor="middle">THE ART OF</text>
+  <text x="200" y="350" font-family="Georgia,serif" font-size="26" font-weight="bold" fill="#e0e7ff" text-anchor="middle">DEEP WORK</text>
+  <line x1="80" y1="380" x2="320" y2="380" stroke="#6366f1" stroke-width="1" opacity="0.5"/>
+  <text x="200" y="410" font-family="Georgia,serif" font-size="14" fill="#a5b4fc" text-anchor="middle">ALEX MORGAN</text>
+  <text x="200" y="550" font-family="sans-serif" font-size="10" fill="#6366f1" text-anchor="middle">BESTSELLER</text>
+</svg>
