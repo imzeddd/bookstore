@@ -4,27 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ShoppingCart, Zap } from "lucide-react";
 import { Book } from "@/types";
-import { useCartStore } from "@/store/cart";
+
+const INSTAMOJO_LINK = "https://imojo.in/fullthrottle";
+
 export default function BookCard({ book }: { book: Book }) {
-  const addItem = useCartStore((s) => s.addItem);
-
-  const handleBuyNow = async () => {
-    const defaultFormat = book.formats[0];
-    const res = await fetch("/api/checkout", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        items: [{ book, format: defaultFormat, quantity: 1 }],
-      }),
-    });
-
-    const { url, error } = await res.json();
-    if (error) {
-      alert("Checkout error: " + error);
-      return;
-    }
-    window.location.href = url;
-  };
 
   return (
     <article className="group bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 overflow-hidden transition-all duration-300">
@@ -59,23 +42,18 @@ export default function BookCard({ book }: { book: Book }) {
 
         <div className="flex items-center justify-between mt-4">
           <span className="text-2xl font-bold text-gray-900">
-            ${book.price.toFixed(2)}
+            ₹{book.price}
           </span>
           <div className="flex gap-2">
-            <button
-              onClick={() => addItem(book, book.formats[0])}
-              className="p-2.5 rounded-xl border border-gray-200 hover:border-red-400 hover:text-red-600 transition-colors"
-              aria-label="Add to cart"
-            >
-              <ShoppingCart size={18} />
-            </button>
-            <button
-              onClick={handleBuyNow}
+            <a
+              href={INSTAMOJO_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors"
             >
               <Zap size={15} />
               Buy Now
-            </button>
+            </a>
           </div>
         </div>
       </div>

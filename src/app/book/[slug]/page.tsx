@@ -4,10 +4,11 @@ import { books } from "@/lib/books";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
-import { useCartStore } from "@/store/cart";
 import { BookFormat } from "@/types";
-import { ShoppingCart, Star, Download, Package, FileText } from "lucide-react";
+import { Star, Download, Package, FileText } from "lucide-react";
 import SubstackBanner from "@/components/SubstackBanner";
+
+const INSTAMOJO_LINK = "https://imojo.in/fullthrottle";
 
 const FORMAT_LABELS: Record<BookFormat, { label: string; icon: React.ReactNode }> = {
   pdf: { label: "PDF", icon: <FileText size={16} /> },
@@ -24,21 +25,6 @@ export default function BookDetailPage({
   if (!book) notFound();
 
   const [selectedFormat, setSelectedFormat] = useState<BookFormat>(book.formats[0]);
-  const addItem = useCartStore((s) => s.addItem);
-
-  const handleBuyNow = async () => {
-    const res = await fetch("/api/checkout", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        items: [{ book, format: selectedFormat, quantity: 1 }],
-      }),
-    });
-
-    const { url, error } = await res.json();
-    if (error) { alert("Checkout error: " + error); return; }
-    window.location.href = url;
-  };
 
   const avgRating =
     book.reviews.reduce((s, r) => s + r.rating, 0) / (book.reviews.length || 1);
@@ -113,19 +99,14 @@ export default function BookDetailPage({
             </span>
           </div>
           <div className="flex gap-3 mt-5">
-            <button
-              onClick={() => addItem(book, selectedFormat)}
-              className="flex items-center gap-2 px-6 py-3.5 rounded-2xl border-2 border-gray-200 hover:border-yellow-400 font-semibold text-gray-700 transition-colors"
+            <a
+              href={INSTAMOJO_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-2xl transition-colors text-sm text-center"
             >
-              <ShoppingCart size={18} />
-              Add to Cart
-            </button>
-            <button
-              onClick={handleBuyNow}
-              className="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-2xl transition-colors text-sm"
-            >
-              Buy Now — ${book.price.toFixed(2)}
-            </button>
+              Buy Now — ₹149
+            </a>
           </div>
 
           {selectedFormat !== "physical" && (
