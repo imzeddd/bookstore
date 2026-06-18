@@ -1,70 +1,100 @@
 import BookCard from "@/components/BookCard";
 import SubstackBanner from "@/components/SubstackBanner";
 import { books } from "@/lib/books";
-import { ArrowDown, Star } from "lucide-react";
+import { ArrowDown, Flag } from "lucide-react";
 
 export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-gray-950 via-red-950 to-yellow-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20"
-          style={{ backgroundImage: "radial-gradient(ellipse at 60% 50%, #ef4444 0%, transparent 70%)" }}
+      <section className="relative bg-zinc-950 text-white overflow-hidden min-h-[90vh] flex items-center">
+        {/* Background texture */}
+        <div className="absolute inset-0"
+          style={{ backgroundImage: "radial-gradient(ellipse at 50% 0%, rgba(220,38,38,0.15) 0%, transparent 60%)" }}
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-1.5 bg-yellow-500/20 border border-yellow-500/30 text-yellow-300 text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
-            <Star size={12} fill="currentColor" /> Bestselling Author
-          </span>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight max-w-4xl">
-            Books That Rewire <br className="hidden md:block" />
-            <span className="text-yellow-400">How You Think</span>
-          </h1>
-          <p className="mt-6 text-gray-300 text-lg md:text-xl max-w-2xl leading-relaxed">
-            Practical wisdom for modern minds. Instant digital downloads. Life-changing ideas.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-10">
-            <a
-              href="#books"
-              className="bg-red-600 hover:bg-red-500 text-white font-bold px-8 py-4 rounded-2xl transition-colors text-base"
-            >
-              Browse All Books
-            </a>
-            <a
-              href="https://substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-8 py-4 rounded-2xl transition-colors text-base"
-            >
-              Free Newsletter
-            </a>
+        <div className="absolute inset-0 opacity-5"
+          style={{ backgroundImage: "repeating-linear-gradient(90deg, #fff 0px, #fff 1px, transparent 1px, transparent 80px), repeating-linear-gradient(0deg, #fff 0px, #fff 1px, transparent 1px, transparent 80px)" }}
+        />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 w-full">
+          <div className="max-w-4xl">
+            {/* Tag */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="h-px w-12 bg-red-500" />
+              <span className="text-red-500 text-xs font-bold uppercase tracking-widest">
+                The GridTalk
+              </span>
+            </div>
+
+            <h1 className="text-5xl sm:text-7xl md:text-8xl font-black leading-none tracking-tighter mb-6">
+              THE FULL<br />
+              <span className="text-red-500">STORY</span><br />
+              OF SPEED.
+            </h1>
+
+            <p className="text-zinc-400 text-lg md:text-xl max-w-xl leading-relaxed mb-10">
+              75 years. 22 chapters. Every champion, every crash, every moment that defined the fastest sport on earth. Written for those who want the truth — not just the highlight reel.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#books"
+                className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-500 text-white font-bold px-8 py-4 rounded-none transition-colors text-sm uppercase tracking-widest"
+              >
+                <Flag size={16} />
+                Get the Book
+              </a>
+              <a
+                href="https://zanwer25.substack.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 border border-zinc-700 hover:border-zinc-400 text-zinc-300 hover:text-white font-bold px-8 py-4 rounded-none transition-colors text-sm uppercase tracking-widest"
+              >
+                Free Newsletter
+              </a>
+            </div>
           </div>
-          <a href="#books" className="mt-16 text-gray-500 hover:text-gray-300 transition-colors animate-bounce">
+
+          {/* Scroll indicator */}
+          <a href="#books" className="absolute bottom-10 left-1/2 -translate-x-1/2 text-zinc-600 hover:text-zinc-400 transition-colors animate-bounce">
             <ArrowDown size={24} />
           </a>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Books Grid */}
-        <section id="books" className="py-20">
-          <div className="flex items-baseline justify-between mb-10">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">The Collection</h2>
-              <p className="text-gray-500 mt-2">Every book ships as PDF, EPUB, or physical copy.</p>
-            </div>
-            <span className="text-sm text-gray-400 font-medium">{books.length} titles</span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {books.map((book) => (
-              <BookCard key={book.id} book={book} />
-            ))}
-          </div>
-        </section>
+      {/* Racing stripe divider */}
+      <div className="flex h-2">
+        <div className="flex-1 bg-red-600" />
+        <div className="flex-1 bg-yellow-400" />
+        <div className="flex-1 bg-red-600" />
+      </div>
 
-        {/* Substack Banner */}
-        <section className="pb-20">
-          <SubstackBanner />
-        </section>
+      <div className="bg-zinc-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Books Grid */}
+          <section id="books" className="py-20">
+            <div className="flex items-baseline justify-between mb-12">
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="h-px w-8 bg-red-500" />
+                  <span className="text-red-500 text-xs font-bold uppercase tracking-widest">Now Available</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight">The Collection</h2>
+              </div>
+              <span className="text-sm text-zinc-600 font-medium">{books.length} {books.length === 1 ? "title" : "titles"}</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {books.map((book) => (
+                <BookCard key={book.id} book={book} />
+              ))}
+            </div>
+          </section>
+
+          {/* Substack Banner */}
+          <section className="pb-20">
+            <SubstackBanner />
+          </section>
+        </div>
       </div>
     </>
   );

@@ -8,15 +8,15 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: {
-    default: "PageForge — Books That Change How You Think",
-    template: "%s | PageForge",
+    default: "The GridTalk — Books About Speed, Machines & Motorsport",
+    template: "%s | The GridTalk",
   },
   description:
-    "Discover books on productivity, self-development, and psychology by bestselling author Alex Morgan. Instant digital downloads and print editions.",
+    "The GridTalk publishes books about Formula 1, motorsport, and the automobile world. Written for fans who want the full story.",
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "PageForge",
+    siteName: "The GridTalk",
   },
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-gray-50 text-gray-900 antialiased`}>
+      <body className={`${inter.className} bg-zinc-950 text-white antialiased`}>
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
