@@ -103,7 +103,7 @@ export default function BookDetailPage({ params }: { params: { slug: string } })
                 className="flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-500 text-white font-black py-4 uppercase tracking-widest transition-colors text-sm"
               >
                 <Zap size={16} />
-                Buy Now on Instamojo
+                Buy Now — ₹99
               </a>
             </div>
 

@@ -6,7 +6,7 @@ export const books: Book[] = [
     slug: "full-throttle-f1",
     title: "Full Throttle: The Complete Story of Formula 1",
     author: "Zed",
-    price: 149,
+    price: 99,
     coverImage: "/covers/full-throttle-f1.jpg",
     description:
       "From Silverstone 1950 to the present day — the complete, unsparing story of Formula 1. Covering every era, every champion, and every defining moment, this is the book for anyone who wants to understand why millions are obsessed with the fastest sport on earth.",
