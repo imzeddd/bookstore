@@ -3,84 +3,35 @@ import { Book } from "@/types";
 export const books: Book[] = [
   {
     id: "1",
-    slug: "the-art-of-deep-work",
-    title: "The Art of Deep Work",
-    author: "Alex Morgan",
+    slug: "full-throttle-f1",
+    title: "Full Throttle: The Complete Story of Formula 1",
+    author: "Zed",
     price: 19.99,
-    coverImage: "/covers/deep-work.svg",
+    coverImage: "/covers/full-throttle-f1.jpg",
     description:
-      "A transformative guide to achieving extraordinary focus in a distracted world. Learn the strategies used by history's greatest minds to produce masterful work in less time.",
+      "From Silverstone 1950 to the present day — the complete, unsparing story of Formula 1. Covering every era, every champion, and every defining moment, this is the book for anyone who wants to understand why millions are obsessed with the fastest sport on earth.",
     excerpt:
-      "In the summer of 2010, a small team of researchers at MIT made a startling discovery. Productivity, they found, was not a function of hours worked — it was a function of depth...",
+      "The date is 13 May 1950. The place is Silverstone, a former Royal Air Force airfield carved into the flat farmland of Northamptonshire, its wartime runways hastily repurposed as the world's most improbable racing circuit. The pit lane is a row of wooden shacks. Haystacks mark the apex of several corners. And yet seventy thousand people have come, pressing against rope barriers, craning their necks for a glimpse of something the world has never quite seen before: the inaugural Formula One World Championship Grand Prix.",
     formats: ["pdf", "epub", "physical"],
     reviews: [
       {
         id: "r1",
-        author: "Sarah K.",
+        author: "James R.",
         rating: 5,
-        body: "This book completely changed how I approach my mornings. My output doubled in three weeks.",
-        date: "2024-11-02",
+        body: "Gripping from the very first page. Zed writes about F1 the way it deserves — with full depth and zero fluff.",
+        date: "2026-01-10",
       },
       {
         id: "r2",
-        author: "James R.",
+        author: "Sarah K.",
         rating: 5,
-        body: "Dense with actionable insights. I've read it twice and still find new gems.",
-        date: "2024-12-15",
+        body: "I knew nothing about Formula 1 before this book. Now I can't stop watching races. Absolutely brilliant.",
+        date: "2026-02-22",
       },
     ],
     stripePriceId: "price_placeholder_1",
-    category: "Productivity",
-    badge: "Bestseller",
-  },
-  {
-    id: "2",
-    slug: "systems-of-clarity",
-    title: "Systems of Clarity",
-    author: "Alex Morgan",
-    price: 24.99,
-    coverImage: "/covers/systems.svg",
-    description:
-      "Unlock the hidden architecture behind every successful person's life. This book teaches you to build personal operating systems that run without willpower.",
-    excerpt:
-      "Willpower is a myth sold to you by a society that profits from your inconsistency. What high performers actually rely on are systems — invisible structures that make the right choice automatic...",
-    formats: ["pdf", "epub"],
-    reviews: [
-      {
-        id: "r3",
-        author: "Mia T.",
-        rating: 4,
-        body: "Practical, well-structured, and surprisingly readable. Highly recommend the chapter on decision fatigue.",
-        date: "2025-01-20",
-      },
-    ],
-    stripePriceId: "price_placeholder_2",
-    category: "Self-Development",
+    category: "Formula 1",
     badge: "New",
-  },
-  {
-    id: "3",
-    slug: "the-quiet-edge",
-    title: "The Quiet Edge",
-    author: "Alex Morgan",
-    price: 14.99,
-    coverImage: "/covers/quiet-edge.svg",
-    description:
-      "An introvert's playbook for thriving in an extrovert's world — at work, in relationships, and in life.",
-    excerpt:
-      "The loudest voice in the room is rarely the wisest. This book is for those who think before they speak, feel deeply, and are tired of being told to speak up more...",
-    formats: ["pdf", "epub", "physical"],
-    reviews: [
-      {
-        id: "r4",
-        author: "Chen L.",
-        rating: 5,
-        body: "Finally, a book that doesn't try to fix me. Just gave me better tools to work with who I am.",
-        date: "2025-03-08",
-      },
-    ],
-    stripePriceId: "price_placeholder_3",
-    category: "Psychology",
   },
 ];
 
